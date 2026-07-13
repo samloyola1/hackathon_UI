@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ── Global back-to-home button ── */
+.back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #8b949e;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  background: #161b22;
+  margin-bottom: 18px;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  width: fit-content;
+}
+
+.back-home-btn:hover {
+  color: #e6edf3;
+  border-color: #58a6ff66;
+  background: #21262d;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   THEME SWITCHING
+   The app ships with a dark palette (hardcoded across component styles).
+   The Light theme is applied globally by inverting the whole document, then
+   counter-inverting media (images / video / canvas) so the live camera feed
+   and photos keep their true colours. Driven by <html data-theme="...">,
+   set from the Settings page via SettingsContext.
+   ═════════════════════════════════════════════════════════════════════════ */
+
+/* Smooth transition when toggling themes. */
+html {
+  transition: filter 0.25s ease;
+}
+
+/* Light theme: invert the dark UI into a light one. */
+html[data-theme='light'] {
+  filter: invert(1) hue-rotate(180deg);
+  background: #ffffff;
+}
+
+/* Keep real-world media true-to-colour by inverting them back. */
+html[data-theme='light'] img,
+html[data-theme='light'] video,
+html[data-theme='light'] canvas {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Dark theme is the default — no filter applied. */
+html[data-theme='dark'] {
+  filter: none;
+}
+

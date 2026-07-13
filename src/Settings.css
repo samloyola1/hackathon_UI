@@ -1,0 +1,131 @@
+.settings {
+  min-height: 100vh;
+  background: #0d1117;
+  color: #e6edf3;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.settings-header {
+  margin-bottom: 24px;
+}
+
+.settings-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.settings-header p {
+  margin: 4px 0 0;
+  color: #8b949e;
+  font-size: 14px;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 640px;
+}
+
+.settings-group {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.settings-group h2 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #30363d;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.field > span {
+  font-size: 13px;
+  color: #8b949e;
+}
+
+.field input[type='text'],
+.field select {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  color: #e6edf3;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.field input[type='text']:focus,
+.field select:focus {
+  outline: none;
+  border-color: #58a6ff;
+}
+
+.field input[type='range'] {
+  accent-color: #58a6ff;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.toggle:last-child {
+  margin-bottom: 0;
+}
+
+.toggle input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  accent-color: #2ea043;
+  cursor: pointer;
+}
+
+.settings-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.save-btn {
+  background: #238636;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #2ea043;
+}
+
+.saved-msg {
+  color: #2ea043;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Back to home - teal */
+.back-home-btn { border-color: #2ea04344; color: #39d353; }
+.back-home-btn:hover { border-color: #39d353; background: #39d35318; color: #56d364; }
